@@ -39,9 +39,11 @@
         {{{body}}}
 
         {{!-- The tiny footer at the very bottom --}}
+
         <footer class="site-footer clearfix">
-            <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}} <a href="http://www.miitbeian.gov.cn/">粤ICP备16124712号</a></section>
-            <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
+            <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}} <a href="http://www.miitbeian.gov.cn/"><br>粤ICP备16124712号</a></section>
+
+            <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a><br><a href="https://www.upyun.com/"><img src="{{asset "/upyun_logo_90x45.png"}}"  alt="又拍云" /></a></section>
         </footer>
 
     </div>

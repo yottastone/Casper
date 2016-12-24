@@ -1738,17 +1738,16 @@ body.page-template .post-title {
 
 .poweredby {
     display: block;
-    width: 45%;
+    width: 50%;
     float: right;
     text-align: right;
 }
 
 .copyright {
     display: block;
-    width: 45%;
+    width: 50%;
     float: left;
 }
-
 
 /* ==========================================================================
    12. Media Queries - Smaller than 900px
