@@ -8,10 +8,18 @@
             <li class="nav-{{slug}}{{#if current}} nav-current{{/if}}" role="presentation"><a href="{{url absolute="true"}}">{{label}}</a></li>
         {{/foreach}}
     </ul>
+
+    <div class="weixin_mp">
+        <img class="weixin_qrcode" src="https://static.makerdiary.co/image/common/qrcode_for_gh_cc09c9878769_258.jpg" alt="微信搜索「造物邦」即可订阅"/>
+        <span>扫描二维码，关注微信订阅号</span>
+    </div>
+
+    {{!-- RSS subscribe no available
     {{#if @labs.subscribers}}
         <a class="subscribe-button" href="{{@blog.url}}/subscribe/">Subscribe</a>
     {{else}}
         <a class="subscribe-button icon-feed" href="{{@blog.url}}/rss/">Subscribe</a>
     {{/if}}
+    --}}
 </div>
 <span class="nav-cover"></span>

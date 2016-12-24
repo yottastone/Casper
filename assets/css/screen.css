@@ -790,6 +790,28 @@ body.nav-opened .nav {
     margin-right: 6px;
 }
 
+.weixin_mp {
+    display: block;
+    bottom: 60px;
+    padding: .5em;
+    margin: 1em 0em 1em 0em;
+    text-align: center;
+    background: rgba(0, 0, 0, .06);
+}
+
+.weixin_mp span {
+    display: block;
+    color: #ffffff;
+    font-size: 80%;
+    margin-top: 10px;
+}
+
+.weixin_qrcode {
+    vertical-align: middle;
+    color: #ffffff;
+    max-width: 80%;
+}
+
 
 /* Create a bouncing scroll-down arrow on homepage with cover image */
 .scroll-down {
