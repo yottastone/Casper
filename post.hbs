@@ -46,7 +46,7 @@
                 {{#if bio}}
                     <p>{{bio}}</p>
                 {{else}}
-                    <p>Read <a href="{{url}}">more posts</a> by this author.</p>
+                    <p>你还可以阅读该作者的<a href="{{url}}">其他文章</a>。</p>
                 {{/if}}
                 <div class="author-meta">
                     {{#if location}}<span class="author-location icon-location">{{location}}</span>{{/if}}
@@ -56,6 +56,7 @@
 
         {{/author}}
 
+            <!-- stop default share function
             <section class="share">
                 <h4>Share this post</h4>
                 <a class="icon-twitter" href="https://twitter.com/intent/tweet?text={{encode title}}&amp;url={{url absolute="true"}}"
@@ -71,6 +72,7 @@
                     <span class="hidden">Google+</span>
                 </a>
             </section>
+            stop default share function -->
 
             {{!-- Email subscribe form at the bottom of the page --}}
             {{#if @labs.subscribers}}
@@ -92,8 +94,24 @@
             var width = window.innerWidth || document.documentElement.clientWidth; 
             if (width < 960) { 
             window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
-            -->
+            停用畅言-->
+
+            <div class="ds-share flat" data-thread-key="{{url absolute="true"}}" data-title="{{title}}" data-images="url({{image}})" data-content="{{excerpt words="26"}}" data-url="{{url absolute="true"}}">
+                <div class="ds-share-inline">
+                    <ul  class="ds-share-icons-16">
             
+                        <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+                        <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+                        <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+                        <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+                        <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+            
+                    </ul>
+                    <div class="ds-share-icons-more">
+                    </div>
+                </div>
+            </div>
+        
             <!-- 多说评论框 start -->
             <div class="ds-thread" data-thread-key="{{url absolute="true"}}" data-title="{{title}}" data-url="{{url absolute="true"}}"></div>
             <!-- 多说评论框 end -->
